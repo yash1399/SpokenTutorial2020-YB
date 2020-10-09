@@ -25,7 +25,7 @@
 $conn = mysqli_connect("localhost", "root", "") or die(mysqli_error()); 
 mysqli_select_db($conn,"counter") or die(mysqli_error());
 //Adds one to the counter
-mysqli_query($conn,"UPDATE visitor SET visitor = visitor + 1");
+$query = mysqli_query($conn,"UPDATE visitor SET visitor = visitor + 1");
 //Retrieves the current count
 $count = mysqli_fetch_row(mysqli_query($conn,"SELECT visitor FROM visitor"));
 //Displays the count on your site
